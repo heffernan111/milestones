@@ -12,5 +12,9 @@
 */
 
 Route::get('/', 'HomeController@index')->middleware('auth');
-// Route::get('users', 'HomeController@index')->middleware('auth');
+Route::get('files', 'FileController@index')->middleware('auth');
+
+
+
+
 Auth::routes();
