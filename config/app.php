@@ -211,4 +211,13 @@ return [
 
     ],
 
+
+    'db_fields' => [
+    'credit',
+    'debit',
+    'date',
+    'reference',
+    'description'
+    ]
+
 ];

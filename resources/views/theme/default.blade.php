@@ -17,6 +17,23 @@
     <link href="{!! asset('theme/vendor/morrisjs/morris.css') !!}" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="{!! asset('theme/vendor/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/modal.css') }}" rel="stylesheet">
+        <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="{!! asset('theme/vendor/jquery/jquery.min.js') !!}"></script>
+    <script src="{{ asset('js/modal.js') }}" defer></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{!! asset('theme/vendor/bootstrap/js/bootstrap.min.js') !!}"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{!! asset('theme/vendor/metisMenu/metisMenu.min.js') !!}"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="{!! asset('theme/vendor/raphael/raphael.min.js') !!}"></script>
+    <script src="{!! asset('theme/vendor/morrisjs/morris.min.js') !!}"></script>
+    <script src="{!! asset('theme/data/morris-data.js') !!}"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="{!! asset('theme/dist/js/sb-admin-2.js') !!}"></script>
+
 </head>
 <body>
     <div id="wrapper">
@@ -30,18 +47,6 @@
         </div>
         <!-- /#page-wrapper -->
     </div>
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="{!! asset('theme/vendor/jquery/jquery.min.js') !!}"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{!! asset('theme/vendor/bootstrap/js/bootstrap.min.js') !!}"></script>
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="{!! asset('theme/vendor/metisMenu/metisMenu.min.js') !!}"></script>
-    <!-- Morris Charts JavaScript -->
-    <script src="{!! asset('theme/vendor/raphael/raphael.min.js') !!}"></script>
-    <script src="{!! asset('theme/vendor/morrisjs/morris.min.js') !!}"></script>
-    <script src="{!! asset('theme/data/morris-data.js') !!}"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="{!! asset('theme/dist/js/sb-admin-2.js') !!}"></script>
+
 </body>
 </html>

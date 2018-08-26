@@ -8,7 +8,7 @@ class File extends Model
 {
 
 	protected $fillable = [
-        'user_id', 'title', 'description',
+        'user_id', 'credit', 'debit','description','reference','date'
     ];
 
     public function user()
