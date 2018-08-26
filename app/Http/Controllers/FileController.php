@@ -26,8 +26,8 @@ class FileController extends Controller
     public function index()
     {
         $pages = DB::table('pages')->get();
-        $files = \App\User::with('files')->find(Auth::id());
-        return view('myFiles',['files' => $files,'pages' => $pages]);
+        $banks = \App\User::with('files')->find(Auth::id());
+        return view('myFiles',['banks' => $banks,'pages' => $pages]);
     }
 
     public function parseImport(Request $request)
@@ -45,7 +45,7 @@ class FileController extends Controller
 
     public function processImport(Request $request)
     {
-       
+        
         $pages = DB::table('pages')->get();
         $data = \App\CsvData::find($request->csv_data_file_id);
 
@@ -55,10 +55,10 @@ class FileController extends Controller
             foreach (config('app.db_fields') as $index => $field) {
                 $file->$field = $row[$request->fields[$index]];
             }
+            $file->user_id = Auth::user()->id;
             $file->save();
         }
-
-        return view('import_success',['pages' => $pages]);
+        return redirect()->action('FileController@index')->with('message', 'Uploaded');
     }
 
 
