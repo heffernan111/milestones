@@ -1,6 +1,6 @@
 @extends('theme.default')
 @section('content')
-<div class="row">
+<div class="row justify-content-center">
     <div class="col-lg-12">
         <h1 class="page-header">Dashboard</h1>
         
@@ -8,7 +8,7 @@
     <!-- /.col-lg-12 -->
 </div>
 <!-- /.row -->
-<div class="row">
+<div class="row justify-content-center">
     <div class="col-lg-3 col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -99,7 +99,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row justify-content-center">
     <div class="col-lg-6">
         <div class="panel panel-default">
             <div class="panel-heading">

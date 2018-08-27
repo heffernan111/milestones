@@ -4,12 +4,11 @@
     <div class="col-lg-12">
         <h1 class="page-header">Dashboard</h1>
     </div>
-            @if (Session::has('message'))
+</div>
+    @if (Session::has('message'))
         <div class="alert alert-success">{{ Session::get('message') }}</div>
     @endif
-
-</div>
-<div class="row">
+<div class="row justify-content-center">
 <div class="container">
     <div class="row justify-content-center">
         <button id="upload" class="btn btn-success">Upload</button>    
@@ -50,9 +49,10 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-6">
-        <table class="table table-sm">
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <table id="table"  class="table table-bordered table-sm">
             <thead>
                 <tr>
                     <th scope="col">id</th>
@@ -63,7 +63,7 @@
                     <th scope="col">date</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="myTable">
                 @foreach($banks->files as $bank)
                 <tr>
                    <td>{{ $bank->id }}</td>
@@ -81,4 +81,14 @@
     </div>
 </div>
 
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 @endsection
